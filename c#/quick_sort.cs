@@ -19,13 +19,13 @@ namespace quickSort
 
             while(i <= j)
             {
-                //returns -1 si l'element est inférieur à middle
+                //returns -1 si l'element est inférieur au pivot
                 //la boucle continue jusqu'à ce qu'un element supérieur au pivot est trouver
                 while(array[i].CompareTo(pivot) < 0)
                 {
                     i++;
                 }
-                //returns 1 si l'element est supérieur à middle
+                //returns 1 si l'element est supérieur au pivot
                 //la boucle continue jusqu'à ce qu'un element inférieur au pivot est trouver
                 while (array[j].CompareTo(pivot) > 0)
                 {
@@ -46,13 +46,13 @@ namespace quickSort
 
             }
 
-            //appliquer le tri sur la partie gauche du tableau
+            //appliquer le tri sur la partie gauche de la liste
             if (left < j)
             {
                 quickSort(array, left, j);
             }
 
-            //aapliquer le tri sur la partie droite du tableu
+            //aapliquer le tri sur la partie droite de la liste
             if (i < right)
             {
                 quickSort(array, i, right);
